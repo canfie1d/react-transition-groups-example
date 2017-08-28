@@ -1,0 +1,31 @@
+// keeps content stationary when both nodes are visible on the page
+.route-wrapper {
+  position: absolute;
+  top: 64px; // move down for header
+  left: 0;
+  width: 100%;
+}
+
+// added when component receives instructions to mount
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+}
+
+// added immediately afterward
+.fade-appear-active,
+.fade-enter-active {
+  transition: opacity 300ms linear;
+  opacity: 1;
+}
+
+// added when component receives instructions to unmount
+.fade-exit {
+  transition: opacity 300ms linear;
+  opacity: 1;
+}
+
+// added immediately afterward
+.fade-exit-active {
+  opacity: 0;
+}
